@@ -141,7 +141,7 @@ if __name__ == "__main__":
     #count = 176089752 # calculated once above.
     part = int(count/num_threads)
 
-    with open(im_list, 'w') as im_file_Record: # record the downloaded imgs
+    with open(im_list, 'a') as im_file_Record: # record the downloaded imgs
         thread_list = []
 
         t0 = time.time()
