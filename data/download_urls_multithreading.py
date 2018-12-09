@@ -33,7 +33,7 @@ def resize_if_needed(mem_img, max_size):
     height,width,_ = decoded.shape
     # Do we have to resize?
     if width <= max_size and height <= max_size:
-        return mem_img
+        return decoded
     # We have to resize. How?
     ratio = float(width) / height
     dim= (max_size, int(max_size / ratio)) if ratio >= 1.0 else (int(max_size * ratio), max_size)
